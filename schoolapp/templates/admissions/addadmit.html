@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" Content-Type:html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+        {%for s in ll%}
+        <table>
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.phn}}</td>
+            <td>{{s.clas}}</td>
+            <td>
+                <a href="/admissions/update/{{s.id}}">update</a>
+                </td>
+        
+        
+        </tr>
+        </table>
+            {%endfor%}
+    
+    <div>
+    
+    
+    <form method="POST">
+    {{kk.as_p}}
+    <button type="submit">submit</button>
+        {% csrf_token %}
+    </form>
+    
+        </div>
+    <div>
+        <form method="POST">
+            {{KK.as_p}}
+            <button type="submit">submit</button>
+                {% csrf_token %}
+            </form>
+    </div>
+    
+    
+    
+
+</head>
+<body>
+    
+</body>
+</html>
